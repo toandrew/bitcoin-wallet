@@ -183,3 +183,5 @@ tags
 
 # python 脚本
 *.pyc
+
+.idea/caches/build_file_checksums.ser
