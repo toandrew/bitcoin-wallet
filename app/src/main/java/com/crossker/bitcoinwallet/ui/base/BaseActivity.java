@@ -10,7 +10,7 @@ public abstract class BaseActivity extends AppCompatActivity {
     Unbinder unbinder;
 
     @Override
-    public void onCreate(Bundle savedInstanceState) {
+    protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
 
         setContentView(getLayoutId());
@@ -19,7 +19,7 @@ public abstract class BaseActivity extends AppCompatActivity {
     }
 
     @Override
-    public void onDestroy() {
+    protected void onDestroy() {
         super.onDestroy();
 
         unbinder.unbind();

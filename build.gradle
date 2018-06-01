@@ -36,6 +36,7 @@ ext {
 
     supportLibVersion = "27.1.1"
     daggerVersion = "2.16"
+    butterKnifeVersion = "8.8.1"
 
     versionName = "${majorVersion}.${minorVersion}.${patchVersion}"
     versionCode = majorVersion * 100 + minorVersion * 10 + patchVersion
