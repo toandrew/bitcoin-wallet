@@ -1,7 +1,8 @@
-package com.crossker.bitcoinwallet
+package com.crossker.bitcoinwallet.ui.main
 
 import android.support.v7.app.AppCompatActivity
 import android.os.Bundle
+import com.crossker.bitcoinwallet.R
 
 class MainActivity : AppCompatActivity() {
 
