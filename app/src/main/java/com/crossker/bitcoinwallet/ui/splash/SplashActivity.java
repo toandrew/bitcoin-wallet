@@ -9,7 +9,7 @@ import android.widget.Button;
 
 import com.crossker.bitcoinwallet.R;
 import com.crossker.bitcoinwallet.ui.base.BaseActivity;
-import com.crossker.bitcoinwallet.ui.login.LoginActivity;
+import com.crossker.bitcoinwallet.ui.login.AuthActivity;
 import com.crossker.bitcoinwallet.ui.main.MainActivity;
 
 import javax.inject.Inject;
@@ -42,7 +42,7 @@ public class SplashActivity extends BaseActivity {
                 startActivity(intent);
             } else {
                 Intent intent = new Intent();
-                intent.setClass(SplashActivity.this, LoginActivity.class);
+                intent.setClass(SplashActivity.this, AuthActivity.class);
                 startActivity(intent);
             }
 

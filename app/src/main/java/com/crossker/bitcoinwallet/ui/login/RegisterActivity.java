@@ -10,7 +10,7 @@ import android.view.View;
 import com.crossker.bitcoinwallet.R;
 import com.crossker.bitcoinwallet.ui.base.BaseActivity;
 
-public class LoginActivity extends BaseActivity {
+public class RegisterActivity extends BaseActivity {
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -21,7 +21,7 @@ public class LoginActivity extends BaseActivity {
 
     @Override
     protected int getLayoutId() {
-        return R.layout.activity_login;
+        return R.layout.activity_register;
     }
 
 }

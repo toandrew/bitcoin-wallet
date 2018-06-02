@@ -1,9 +1,10 @@
 <resources>
-    <string name="app_name">BitcoinWallet</string>
-    <string name="title_activity_splash">SplashActivity</string>
-    <string name="title_activity_login">LoginActivity</string>
+    <string name="app_name">比特币钱包</string>
 
+    <!-- login related -->
     <string name="login_login">已有账户，去登录</string>
     <string name="login_register">创建新账户</string>
     <string name="login_license">服务条款及隐私保护</string>
+    <string name="title_activity_register">注册</string>
+    <string name="title_activity_login">登录</string>
 </resources>
