@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
-<android.support.design.widget.CoordinatorLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
@@ -7,6 +7,7 @@
     tools:context=".ui.login.LoginActivity">
 
     <android.support.design.widget.AppBarLayout
+        android:id="@+id/appBarLayout2"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:theme="@style/AppTheme.AppBarOverlay">
@@ -19,4 +20,116 @@
             app:popupTheme="@style/AppTheme.PopupOverlay" />
 
     </android.support.design.widget.AppBarLayout>
-</android.support.design.widget.CoordinatorLayout>
+
+    <EditText
+        android:id="@+id/keywords"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:drawableEnd="@android:drawable/ic_delete"
+        android:ems="10"
+        android:hint="粘贴或扫描输入助记词"
+        android:inputType="textPersonName"
+        app:layout_constraintBottom_toTopOf="@+id/password"
+        app:layout_constraintEnd_toStartOf="@+id/guideline8"
+        app:layout_constraintStart_toStartOf="@+id/guideline7"
+        app:layout_constraintTop_toTopOf="@+id/guideline9" />
+
+    <android.support.constraint.Guideline
+        android:id="@+id/guideline7"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        app:layout_constraintGuide_begin="20dp" />
+
+    <android.support.constraint.Guideline
+        android:id="@+id/guideline8"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        app:layout_constraintGuide_percent="0.96" />
+
+    <android.support.constraint.Guideline
+        android:id="@+id/guideline9"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        app:layout_constraintGuide_begin="56dp" />
+
+    <EditText
+        android:id="@+id/password"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="8dp"
+        android:drawableEnd="@android:drawable/ic_delete"
+        android:ems="10"
+        android:hint="设置交易密码"
+        android:inputType="textVisiblePassword"
+        app:layout_constraintBottom_toTopOf="@+id/password2"
+        app:layout_constraintEnd_toStartOf="@+id/guideline8"
+        app:layout_constraintHorizontal_bias="0.448"
+        app:layout_constraintStart_toStartOf="@+id/guideline7"
+        app:layout_constraintTop_toBottomOf="@+id/keywords" />
+
+    <EditText
+        android:id="@+id/password2"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="8dp"
+        android:drawableEnd="@android:drawable/ic_delete"
+        android:ems="10"
+        android:hint="确认交易密码"
+        android:inputType="textVisiblePassword"
+        app:layout_constraintBottom_toTopOf="@+id/code"
+        app:layout_constraintEnd_toStartOf="@+id/guideline8"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="@+id/guideline7"
+        app:layout_constraintTop_toBottomOf="@+id/password" />
+
+    <EditText
+        android:id="@+id/code"
+        android:layout_width="0dp"
+        android:layout_height="50dp"
+        android:ems="10"
+        android:hint="验证码"
+        android:inputType="number"
+        app:layout_constraintBottom_toTopOf="@+id/info"
+        app:layout_constraintEnd_toStartOf="@+id/guideline8"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="@+id/guideline7"
+        app:layout_constraintTop_toBottomOf="@+id/password2" />
+
+    <TextView
+        android:id="@+id/info"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="16dp"
+        android:layout_marginEnd="8dp"
+        android:text="验证码将发送到您创建账户时填写的手机"
+        app:layout_constraintBottom_toTopOf="@+id/btn_login"
+        app:layout_constraintEnd_toStartOf="@+id/guideline8"
+        app:layout_constraintStart_toStartOf="@+id/guideline7"
+        app:layout_constraintTop_toBottomOf="@+id/code" />
+
+    <Button
+        android:id="@+id/btn_login"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="24dp"
+        android:text="确认登录"
+        app:layout_constraintEnd_toStartOf="@+id/guideline8"
+        app:layout_constraintHorizontal_bias="0.512"
+        app:layout_constraintStart_toStartOf="@+id/guideline7"
+        app:layout_constraintTop_toBottomOf="@+id/info" />
+
+    <Button
+        android:id="@+id/button2"
+        android:layout_width="92dp"
+        android:layout_height="36dp"
+        android:text="发送验证码"
+        android:textSize="12sp"
+        app:layout_constraintBottom_toBottomOf="@+id/code"
+        app:layout_constraintEnd_toEndOf="@+id/code"
+        app:layout_constraintTop_toTopOf="@+id/code" />
+
+</android.support.constraint.ConstraintLayout>
