@@ -26,7 +26,7 @@ public class SplashActivity extends BaseActivity {
     @BindView(R.id.sp_jump_btn)
     Button skipBtn;
 
-    private CountDownTimer timer = new CountDownTimer(3400, 1000) {
+    private CountDownTimer timer = new CountDownTimer(1200, 1000) {
         @Override
         public void onTick(long l) {
             skipBtn.setText(l / 1000 + "s");
