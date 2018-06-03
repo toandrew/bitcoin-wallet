@@ -1,5 +1,6 @@
 package com.crossker.bitcoinwallet.ui.login;
 
+import android.content.Intent;
 import android.os.Bundle;
 import android.support.design.widget.FloatingActionButton;
 import android.support.design.widget.Snackbar;
@@ -9,6 +10,9 @@ import android.view.View;
 
 import com.crossker.bitcoinwallet.R;
 import com.crossker.bitcoinwallet.ui.base.BaseActivity;
+import com.crossker.bitcoinwallet.ui.main.MainActivity;
+
+import butterknife.OnClick;
 
 public class LoginActivity extends BaseActivity {
 
@@ -27,6 +31,15 @@ public class LoginActivity extends BaseActivity {
     @Override
     protected int getLayoutId() {
         return R.layout.activity_login;
+    }
+
+    @OnClick(R.id.btn_login)
+    void onLoginClicked() {
+        Intent intent = new Intent();
+        intent.setClass(LoginActivity.this, MainActivity.class);
+        startActivity(intent);
+
+        finish();
     }
 
 }
