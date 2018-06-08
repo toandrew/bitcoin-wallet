@@ -7,4 +7,9 @@
     <string name="login_license">服务条款及隐私保护</string>
     <string name="title_activity_register">注册</string>
     <string name="title_activity_login">登录</string>
+
+    <string name="tab_item_wealth">财富</string>
+    <string name="tab_item_trend">行情</string>
+    <string name="tab_item_friends">朋友</string>
+    <string name="tab_item_me">我的</string>
 </resources>

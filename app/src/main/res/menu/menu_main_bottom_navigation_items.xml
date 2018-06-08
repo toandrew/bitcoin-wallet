@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <item android:icon="@drawable/selector_tab_item_chat" android:id="@+id/tab_wealth" android:title="@string/tab_item_wealth" />
+    <item android:icon="@drawable/selector_tab_item_trend" android:id="@+id/tab_trend" android:title="@string/tab_item_trend" />
+    <item android:icon="@drawable/selector_tab_item_friends" android:id="@+id/tab_friends" android:checked="true" android:title="@string/tab_item_friends" />
+    <item android:icon="@drawable/selector_tab_item_me" android:id="@+id/tab_me" android:title="@string/tab_item_me" />
+</menu>

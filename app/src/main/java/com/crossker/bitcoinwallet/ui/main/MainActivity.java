@@ -6,11 +6,12 @@ import android.util.Log;
 import com.crossker.bitcoinwallet.R;
 import com.crossker.bitcoinwallet.mvp.main.MainContract;
 import com.crossker.bitcoinwallet.mvp.main.MainPresenter;
-import com.crossker.bitcoinwallet.ui.base.BaseActivity;
 import com.crossker.bitcoinwallet.ui.base.LceNormalActivity;
+import com.ittianyu.bottomnavigationviewex.BottomNavigationViewEx;
 
 import javax.inject.Inject;
 
+import butterknife.BindView;
 import dagger.android.AndroidInjection;
 
 public class MainActivity extends LceNormalActivity implements MainContract.View {
@@ -18,6 +19,9 @@ public class MainActivity extends LceNormalActivity implements MainContract.View
 
     @Inject
     MainPresenter mainPresenter;
+
+    @BindView(R.id.bottom_navigation)
+    BottomNavigationViewEx bottomNavigation;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -27,6 +31,10 @@ public class MainActivity extends LceNormalActivity implements MainContract.View
         mainPresenter.attachView(this);
 
         mainPresenter.test();
+
+        bottomNavigation.enableAnimation(false);
+        bottomNavigation.enableShiftingMode(false);
+        bottomNavigation.enableItemShiftingMode(false);
     }
 
     @Override
